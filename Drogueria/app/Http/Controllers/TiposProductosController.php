@@ -9,7 +9,7 @@ class TiposProductosController extends Controller
 {
     public function index() {
         $types = TiposProductos::orderBy('nombre')->paginate(10);
-        return view('TiposProductos.index', compact('types')); 
+        return view('TiposProductos.index', compact('types'));
     }
     public function create() {
         return view('TiposProductos.create');
